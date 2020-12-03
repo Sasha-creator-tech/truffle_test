@@ -1,4 +1,7 @@
 // SPDX-License-Identifier: MIT
+/*
+Copy of previous contract but with right names;
+**/
 pragma solidity >=0.4.22 <0.8.0;
 
 contract DudleToken {
@@ -15,10 +18,10 @@ contract DudleToken {
     event Transfer(address indexed _from, address indexed _to, uint _value);
     event Approval(address indexed _from, address indexed _to, uint _value);
 
-    constructor () public {
+    constructor (uint256 startAmount) public {
     	//the owner need to have 1000 tokens after deploy
-    	balances[msg.sender] = 1000;
-    	totalSupply += 1000;
+    	balances[msg.sender] = startAmount;
+    	totalSupply += startAmount;
     }
     
     function allowance(address _owner, address _spender) public view returns (uint) {
