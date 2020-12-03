@@ -5,7 +5,7 @@ Copy of previous contract but with right names;
 pragma solidity >=0.4.22 <0.8.0;
 
 contract DudleToken {
-  string public constant name = "DudleToken";
+    string public constant name = "DudleToken";
     string public constant symbol = "DLT";
     uint8 public constant decimals = 1;
     
